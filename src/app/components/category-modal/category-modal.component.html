@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ isEdit ? 'Editar' : 'Nueva' }} Categoría</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form (ngSubmit)="save()">
+    <ion-item>
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input
+        [(ngModel)]="category.name"
+        name="name"
+        required
+        maxlength="25"
+        placeholder="Nombre"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">Color</ion-label>
+      <div class="color-picker-row">
+        <button
+          *ngFor="let color of categoryColors"
+          type="button"
+          [style.background]="color"
+          class="color-swatch"
+          [class.selected]="category.color === color"
+          (click)="category.color = color"
+          [attr.aria-label]="color"
+        ></button>
+      </div>
+    </ion-item>
+
+    <ion-button
+      expand="block"
+      [disabled]="!category.name"
+      type="submit"
+      class="ion-margin-top"
+      color="primary"
+    >
+      {{ isEdit ? 'Guardar' : 'Crear' }}
+    </ion-button>
+  </form>
+</ion-content>

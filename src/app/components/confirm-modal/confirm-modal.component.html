@@ -1,0 +1,27 @@
+<div class="confirm-modal-content animate__animated animate__fadeInDown">
+  <div class="ion-text-center">
+    <ion-icon
+      [name]="icon"
+      class="confirm-modal-icon"
+      [ngStyle]="{'color': iconColor}"
+    ></ion-icon>
+    <h2 class="confirm-modal-title">{{ title }}</h2>
+    <div class="confirm-modal-desc" [innerHTML]="message"></div>
+  </div>
+  <ion-button
+    expand="block"
+    class="confirm-modal-btn confirm-modal-btn-cancel"
+    (click)="dismiss()"
+    color="medium"
+  >
+    {{ cancelText }}
+  </ion-button>
+  <ion-button
+    expand="block"
+    class="confirm-modal-btn confirm-modal-btn-delete"
+    (click)="confirm()"
+    color="danger"
+  >
+    {{ confirmText }}
+  </ion-button>
+</div>

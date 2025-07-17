@@ -1,0 +1,119 @@
+.category-chip-bar {
+  display: flex;
+  overflow-x: auto;
+  align-items: center;
+  gap: 0.55em;
+  margin-bottom: 1em;
+  padding: 0.4em 0.7em 0.2em 0.7em;
+  min-height: 46px;
+  scrollbar-width: thin;
+
+  ion-chip {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    max-width: 155px;
+    border-radius: 22px;
+    font-size: 1em;
+    padding: 0 0.7em 0 0.7em;
+    height: 38px;
+    .chip-label {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 70px;
+      margin-right: 0.2em;
+      font-weight: 500;
+    }
+    .chip-icon {
+      margin-left: 0.04em;
+      margin-right: 0.01em;
+      padding: 0;
+      background: none !important;
+      border: none;
+      box-shadow: none;
+      outline: none;
+      width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .chip-icon ion-icon {
+      font-size: 1.08em;
+      background: none;
+    }
+    .chip-icon:last-child ion-icon {
+      color: #fff;
+      background: #ff3b30;
+      padding: 0.11em;
+      border-radius: 50%;
+    }
+  }
+  ion-chip.selected {
+    background: #6666ff !important;
+    color: #fff !important;
+    .chip-label {
+      color: #fff !important;
+    }
+    .chip-icon ion-icon {
+      color: #fff !important;
+      opacity: 0.88;
+    }
+  }
+  .chip-all {
+    background: #e6e6e6 !important;
+    color: #222 !important;
+    min-width: 65px;
+    max-width: 120px;
+    font-weight: 500;
+    border-radius: 22px;
+    height: 38px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    cursor: pointer;
+    padding: 0 1.2em 0 1.2em;
+    letter-spacing: 0.01em;
+  }
+}
+
+
+
+.add-task-footer {
+  ion-toolbar {
+    background: #fff !important;
+    border-top: 1px solid #eee;
+    min-height: 62px;
+    padding: 0.2em 0.6em;
+    .add-task-row {
+      align-items: center;
+      width: 100%;
+      gap: 0.5em;
+      ion-col {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .add-task-input {
+        font-size: 1.17em;
+        background: transparent !important;
+        width: 99%;
+      }
+      ion-select {
+        min-width: 120px;
+        font-size: 1em;
+        max-width: 120px;
+      }
+      ion-button {
+        width: 100%;
+        min-width: 44px;
+        height: 44px;
+        --box-shadow: none;
+        font-size: 1.5em;
+        margin-left: 0.2em;
+      }
+    }
+  }
+}

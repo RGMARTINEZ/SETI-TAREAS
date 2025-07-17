@@ -1,0 +1,168 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.class.css";
+
+
+
+body.dark {
+  // Cards y fondo
+  ion-card {
+    background: #232329;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.14) !important;
+    border-radius: 20px;
+  }
+
+  ion-content {
+    --background: #16161a;
+  }
+
+  // Títulos y badges
+  ion-card-title,
+  .chip-label {
+    color: #fff !important;
+  }
+
+  ion-badge[color="warning"] {
+    background: #ffb300 !important;
+    color: #222 !important;
+  }
+  ion-badge[color="success"] {
+    background: #2cd364 !important;
+    color: #fff !important;
+  }
+
+  // Chips de categoría
+  .category-chip-bar {
+    ion-chip {
+      background: #232329 !important;
+      color: #fff !important;
+      .chip-icon ion-icon {
+        color: #fff;
+        background: none;
+      }
+      .chip-icon:last-child ion-icon {
+        background: #ff3b30;
+        color: #fff;
+      }
+    }
+    ion-chip[outline] {
+      background: transparent !important;
+      color: #b6b6b6 !important;
+      border: 1px solid #333;
+    }
+  }
+
+  // Footer/input
+  .add-task-footer {
+    ion-toolbar {
+      background: #181820 !important;
+      border-top: 1px solid #24242c;
+    }
+  }
+  .add-task-input {
+    background: #24242c !important;
+    color: #fff !important;
+    &::placeholder {
+      color: #888 !important;
+    }
+  }
+  ion-select {
+    background: #232329 !important;
+    color: #fff !important;
+    .select-text {
+      color: #fff !important;
+    }
+  }
+  ion-button[color="success"] {
+    background: #00c891 !important;
+    color: #fff !important;
+  }
+
+  // Iconos y botones en listas
+  ion-icon[name="trash"] {
+    color: #ff5555 !important;
+  }
+
+  // Checkbox y chip seleccionados
+  ion-checkbox[aria-checked="true"] {
+    --background: #00b2ff;
+    --border-color: #00b2ff;
+  }
+  ion-chip[selected], ion-chip[style*="background:"] {
+    filter: brightness(1.2);
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.14);
+  }
+}
+
+// General: bordes y efectos ligeros
+ion-card {
+  border-radius: 20px;
+  margin-bottom: 1.1em;
+}
+
+
+body.dark {
+  .confirm-modal-content {
+    background: #18181b !important; // O el color que uses para fondo oscuro
+    color: #fff;
+  }
+
+  .confirm-modal-title {
+    color: #fff !important;
+  }
+
+  .confirm-modal-desc {
+    color: #bbb !important;
+    font-size: 1.02em;
+    margin-top: 0.1em;
+  }
+
+  .confirm-modal-icon {
+    color: #ff3333 !important;
+    margin-bottom: 0.7em;
+    font-size: 2.4em;
+  }
+
+  .confirm-modal-btn-cancel {
+    background: #37373f !important;
+    color: #fff !important;
+  }
+  .confirm-modal-btn-delete {
+    background: #ce1212 !important;
+    color: #fff !important;
+  }
+}
